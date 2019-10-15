@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 var fetch = require("node-fetch");
 
-function weatherBalloon() {
+/*function weatherBalloon() {
   var cityID = "Statesboro,GA";
   var key = '{9403c5022e4b2d80a2bcc5739332adff}';
   fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
@@ -16,6 +16,17 @@ function weatherBalloon() {
   .catch(function() {
     // catch any errors
   });
+}*/
+function weatherBalloon() {
+  var cityID = "Statesboro,GA";
+  var key = '{9403c5022e4b2d80a2bcc5739332adff}';
+  axios.get('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)
+    .then(function (response) {
+     console.log(response);
+   })
+  .catch(function (error) {
+    console.log(error);
+   });
 }
 
 function respond() {
