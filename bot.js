@@ -47,9 +47,9 @@ function parseURLParams(url) {
     return parms;
 }
 function weatherBalloon() {
-    var cityID = "Statesboro,GA";
-    var key = '{9403c5022e4b2d80a2bcc5739332adff}';
-    var urlString = "https://api.openweathermap.org/data/2.5/weather?id=" + cityID+ "&appid=" + key;
+    //var cityID = "Statesboro,GA";
+    //var key = '{9403c5022e4b2d80a2bcc5739332adff}';
+    var urlString = "https://api.openweathermap.org/data/2.5/weather?q=Statesboro,us&appid=9403c5022e4b2d80a2bcc5739332adff";
     urlParams = parseURLParams(urlString);
     console.log(JSON.stringify(urlParams));
 }
