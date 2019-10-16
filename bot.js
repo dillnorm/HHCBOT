@@ -26,7 +26,7 @@ var botID = process.env.BOT_ID;
     console.log(error);
    });
 }
-*/
+
 function parseURLParams(url) {
     var queryStart = url.indexOf("?") + 1,
         queryEnd   = url.indexOf("#") + 1 || url.length + 1,
@@ -53,7 +53,7 @@ function weatherBalloon() {
     urlParams = parseURLParams(urlString);
     console.log(JSON.stringify(urlParams));
 }
-
+*/
 function respond() {
   var request = JSON.parse(this.req.chunks[0]);
  
